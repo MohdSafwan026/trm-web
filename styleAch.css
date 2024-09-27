@@ -1,0 +1,137 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background-color: #0e0e0e;
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e0e0e;
+    padding: 10px 20px;
+}
+
+/* Logo Styles */
+.logo-container {
+    flex: 1;
+    text-align: left;
+}
+
+.logo-left {
+    width: 100px;
+    height: auto;
+}
+
+.team-logo-container {
+    flex: 1;
+    text-align: right;
+}
+
+.logo-right {
+    width: 80px;
+    height: auto;
+}
+
+/* Navigation Bar */
+.navbar {
+    flex: 3;
+    align-items: center;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    display: inline-flex;
+    text-align: center;
+    padding: 0 100px;
+}
+
+.menu-item {
+    margin: 0 15px;
+}
+
+.menu-item a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+    color: #FB0244;
+}
+
+.active a {
+    color: #FB0244;
+    border-bottom: 2px solid #FB0244;
+}
+
+
+
+.achievements-section {
+    padding: 50px 0;
+    background-color: #0e0e0e;
+}
+
+.achievements-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 50px;
+    background-color: #0e0e0e;
+}
+
+.title {
+    color: #FB0244;
+    font-size: 48px;
+    text-align: center;  /* Center align the title */
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Grid for achievements */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Two columns */
+    gap: 20px;  /* Space between items */
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.achievement-box {
+    width: 370px;
+    height: 350px;
+    object-fit: cover; /* Ensure the image fits the box */
+    border: 2px solid #222;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.achievement-text h2 {
+    color: #FB0244;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.achievement-text p {
+    font-size: 16px;
+    color: #c1c1c1;
+}
+
+

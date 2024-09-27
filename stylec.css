@@ -1,0 +1,131 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background-color: #0e0e0e;
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e0e0e;
+    padding: 10px 20px;
+}
+
+/* Logo Styles */
+.logo-container {
+    flex: 1;
+    text-align: left;
+}
+
+.logo-left {
+    width: 100px;
+    height: auto;
+}
+
+.team-logo-container {
+    flex: 1;
+    text-align: right;
+}
+
+.logo-right {
+    width: 80px;
+    height: auto;
+}
+
+/* Navigation Bar */
+.navbar {
+    flex: 3;
+    align-items: center;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    display: inline-flex;
+    text-align: center;
+    padding: 0 100px;
+}
+
+.menu-item {
+    margin: 0 15px;
+}
+
+.menu-item a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+    color: #FB0244;
+}
+
+.active a {
+    color: #FB0244;
+    border-bottom: 2px solid #FB0244;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 150px 0;
+    background-color: #0e0e0e;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 36px;
+    color: #FB0244;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-icon {
+    margin: 0 15px;
+    font-size: 40px;
+    color: #FB0244;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: #ff5e71;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #FB0244;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
