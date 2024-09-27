@@ -156,6 +156,11 @@ body {
         font-size: 24px;
         z-index: 20; /* Ensure it stays above other elements */
         cursor: pointer;
+        box-shadow: none;
+        background-color: #0e0e0e;
+        
+        color: #FB0255;
+        border-radius: 10px;
     }
 .mobile-menu {
     position: absolute;  /* Ensure it's positioned relative to the parent container */
