@@ -55,9 +55,19 @@
         </div>
     </section>
 
-    <section-alumni>
-        
-    </section-alumni>
+    <button class="hamburger">☰</button>
+         <nav class="mobile-menu">
+                    <li class="menu-item active"><a href="index.html">HOME</a></li>
+                    <li class="menu-item"><a href="About.html">ABOUT</a></li>
+                    <li class="menu-item"><a href="Achieve.html">ACHEIVEMENTS</a></li>
+                    <li class="menu-item"><a href="Team.html">TEAM</a></li>
+                    <li class="menu-item"><a href="Contact.html">CONTACT</a></li>
+                    <script>
+                        document.querySelector('.hamburger').addEventListener('click', function () {
+                            document.querySelector('.mobile-menu').classList.toggle('active');
+                        });
+                    </script>
+        </nav>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
