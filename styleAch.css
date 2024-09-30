@@ -366,7 +366,7 @@ body {
         }
         
         .achievement-box {
-            width: 70%;
+            width: 50%;
             height: auto;
             object-fit: cover; /* Ensure the image fits the box */
             border: 2px solid #222;
@@ -376,12 +376,12 @@ body {
         
         .achievement-text h2 {
             color: #FB0244;
-            font-size: 6px;
+            font-size: 16px;
             margin-bottom: 10px;
         }
         
         .achievement-text p {
-            font-size: 5px;
+            font-size: 12px;
             color: #c1c1c1;
         }
      
