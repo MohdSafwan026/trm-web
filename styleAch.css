@@ -154,7 +154,7 @@ body {
     }
 
     .logo-left {
-        width: 100px;
+        width: 70px;
         height: auto;
     }
     .logo-right{
@@ -230,7 +230,7 @@ body {
         }
         
         .achievement-box {
-            width: 70%;
+            width: 50%;
             height: auto;
             object-fit: cover; /* Ensure the image fits the box */
             border: 2px solid #222;
@@ -290,7 +290,7 @@ body {
     }
 
     .logo-left {
-        width: 100px;
+        width: 70px;
         height: auto;
     }
     .logo-right{
@@ -366,7 +366,7 @@ body {
         }
         
         .achievement-box {
-            width: 50%;
+            width: 30%;
             height: auto;
             object-fit: cover; /* Ensure the image fits the box */
             border: 2px solid #222;
