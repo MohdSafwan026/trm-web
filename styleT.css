@@ -378,7 +378,7 @@
                 display: grid;
                 grid-template-columns: repeat(3,1fr);
                 align-items: center;
-                gap: 3rem;
+                gap: 1rem;
                 column-gap:70px ;
                 text-align: center;
                 margin-top: 2rem;
@@ -390,7 +390,7 @@
                 border: #FB0244;
                 border-radius: 5px;
                 margin-bottom: 5px;
-            
+                padding-right: 10px;
             
             }
             .center h1{
@@ -523,8 +523,8 @@
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
                 align-items: center;
-                gap: 2rem;
-                column-gap:80px ;
+                gap: 1rem;
+                column-gap:50px ;
                 text-align: center;
                 margin-top: 2rem;
             }
