@@ -429,7 +429,10 @@ body {
     .top-left, .top-right {
         width: 60px;
     }
- 
+    .logo-left{
+        width:70px;
+        height: auto;
+    }
         .menu-item {
             margin: 0 5px;
         }
