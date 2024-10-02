@@ -1,8 +1,9 @@
-
+/* General resets */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -15,19 +16,23 @@ body {
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     background-color: #0e0e0e;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
+/* Logo Styles */
 .logo-container {
     flex: 1;
     text-align: left;
 }
 
-.logo-left {
+.logo-left-1 {
     width: 100px;
     height: auto;
+}
+.logo-left-2{
+    display: none;
 }
 
 .team-logo-container {
@@ -40,6 +45,7 @@ body {
     height: auto;
 }
 
+/* Navigation Bar */
 .navbar {
     flex: 3;
     align-items: center;
@@ -70,66 +76,67 @@ body {
 }
 
 .active a {
-    border-bottom: 2px solid #FB0244; /* Add bottom border */
     color: #FB0244;
+    border-bottom: 2px solid #FB0244;
 }
 
 
-.about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
+
+.achievements-section {
+    padding: 50px 0;
+    background-color: #0e0e0e;
 }
 
-.image-container {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.image-container img {
+.achievements-container {
     width: 100%;
-    max-width: 400px;
-    border: 5px solid #FB0244;
-    padding: 10px;
+    margin: 0 auto;
+    padding: 30px 50px;
+    background-color: #0e0e0e;
 }
 
-.content-container {
-    flex: 3;
-    /* padding-left: 200px; */
-}
-
-h2 {
-    display: flex;
-    font-display: flex;
+.title {
     color: #FB0244;
-    font-size: 36px;
-    align-items: center;
-    margin-bottom: 20px;
-    size-adjust:inherit ;
-}
-
-p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.join-btn {
-    background-color: #FB0244;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 16px;
+    font-size: 48px;
+    text-align: center;  /* Center align the title */
+    margin-bottom: 30px;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-.join-btn:hover {
-    color: #FB0244;
-    background-color: #fff;
+/* Grid for achievements */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Two columns */
+    gap: 20px;  /* Space between items */
 }
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.achievement-box {
+    width: 370px;
+    height: 350px;
+    object-fit: cover; /* Ensure the image fits the box */
+    border: 2px solid #222;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.achievement-text h2 {
+    color: #FB0244;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.achievement-text p {
+    font-size: 16px;
+    color: #c1c1c1;
+}
+
 .hamburger{
     display: none;
 }
@@ -148,6 +155,15 @@ p {
         background-color: #0e0e0e
     
     }
+
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
+        display: block;
+        width: 200px;
+        height: auto;
+    }
     .logo-right{
         display: none;
     }
@@ -155,14 +171,8 @@ p {
     .navbar {
         display: none;
     }
-    .content-container {
-        flex: 3;
-        
-    }
+
     .main-image {
-        max-width: 100%;
-        display: block;
-        width: 100%;
         height: auto;
     }
 
@@ -189,27 +199,64 @@ p {
             box-shadow: none; /* Remove any box shadow */
             border: #0e0e0e;
         }
-     
-        .content-container {
-            flex: 3;
-            /* padding-left: 200px; */
+
+        .achievements-section {
+            padding: 50px 0;
+            background-color: #0e0e0e;
         }
         
-        h2 {
-            display: flex;
-            font-display: flex;
+        .achievements-container {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            padding: 30px 50px;
+            background-color: #0e0e0e;
+        }
+        
+        .title {
             color: #FB0244;
-            font-size: 20px;
-            align-items: center;
-            /* margin-bottom: 20px;
-            size-adjust:inherit ; */
+            font-size: 30px;
+            text-align: center;  /* Center align the title */
+            margin-bottom: 30px;
+            font-weight: bold;
         }
         
-        p {
-            font-size: 8px;
-            margin-bottom: 20px;
-            line-height: 1.6;
+        /* Grid for achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* Two columns */
+            gap: 20px;  /* Space between items */
         }
+        
+        .achievement-item {
+            display: flex;
+            align-items: center;
+            background-color: #1c1c1c;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .achievement-box {
+            width: 50%;
+            height: auto;
+            object-fit: cover; /* Ensure the image fits the box */
+            border: 2px solid #222;
+            margin-right: 18px;
+            border-radius: 10px;
+        }
+        
+        .achievement-text h2 {
+            color: #FB0244;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-text p {
+            font-size: 12px;
+            color: #c1c1c1;
+        }
+     
+       
     
 .mobile-menu {
     position: absolute;  /* Ensure it's positioned relative to the parent container */
@@ -239,77 +286,129 @@ p {
 }
 
 @media (max-width: 768px) {
-    body {
+    body{
+        background-color: #0e0e0e;
+    }
+    .header-container {
+        flex-direction: column;
+        text-align: left;
+        background-color: #0e0e0e
+    
+    }
+
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
         display: block;
-        padding: 10px;
+        width: 150px;
+        height: auto;
     }
     .logo-right{
-      padding-right: 10px; 
-   }
-    .navbar ul li {
-        margin: 0;
+        display: none;
     }
 
-    .join-button {
-        bottom: 30px;
-        font-size: 16px;
-        padding: 100px 20px;
-    }
-
-    .top-left, .top-right {
-        padding-right:10px;
-        width: 80px;
-        top: 10px;
-    }
-
-    .top-left {
-        left: 5px;
-    }
-
-    .top-right {
-        right: 5px;
+    .navbar {
+        display: none;
     }
 
     .main-image {
-        max-width: 100%;
-        display: block;
-        width: 100%;
         height: auto;
     }
 
-    .main-image {
-        max-width: 100%;
-        display: block;
-        width: 100%;
-        height: auto;
+    .join-btn {
+        bottom: -100px;
+        padding: 8px 15px;
+        font-size: 14px;
     }
-
+    .active a {
+        color: #FB0244;
+           border-bottom: none; /* Add bottom border */
+    }
     .hamburger {
         
-        display: block;
-        position: absolute;
-        top: 20px;  
-        right: 20px; 
-        color: #FB0255;
-        background-color: #0e0e0e;
-        font-size: 24px;
-        z-index: 20; 
-        cursor: pointer;
-        box-shadow: none; /* Remove any box shadow */
-        border: #0e0e0e;
-}
-    
+            display: block;
+            position: absolute;
+            top: 20px;  
+            right: 20px; 
+            color: #FB0255;
+            background-color: #0e0e0e;
+            font-size: 24px;
+            z-index: 20; 
+            cursor: pointer;
+            box-shadow: none; /* Remove any box shadow */
+            border: #0e0e0e;
+        }
+
+        .achievements-section {
+            padding: 50px 0;
+            background-color: #0e0e0e;
+        }
+        
+        .achievements-container {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            padding: 20px 20px;
+            background-color: #0e0e0e;
+        }
+        
+        .title {
+            color: #FB0244;
+            font-size: 25px;
+            text-align: center;  /* Center align the title */
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        /* Grid for achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);  /* Two columns */
+            gap: 10px;  /* Space between items */
+        }
+        
+        .achievement-item {
+            display: block;  /* Ensure items are stacked, not aligned side by side */
+            text-align: center;  /* Center the content inside the achievement item */
+            background-color: #1c1c1c;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 400px;  /* Optional: Set max-width for consistent size */
+            margin: 0 auto;  /* Center the item horizontally */
+        }
+        
+        .achievement-box {
+            width: 100%;  /* Image takes full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Ensure the image fits the box */
+            border: 2px solid #222;
+            border-radius: 10px;
+            margin-bottom: 15px; /* Add space between image and text */
+        }
+        
+        .achievement-text h2 {
+            color: #FB0244;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-text p {
+            font-size: 16px;
+            color: #c1c1c1;
+        }
+     
+       
     
 .mobile-menu {
     position: absolute;  /* Ensure it's positioned relative to the parent container */
     top: 60px;  /* Adjust based on where you want the menu to appear */
     left: 0;
     width: 100%;
-    background-color: #000000;
+    background-color: #0e0e0e;
     z-index: 20;  /* Higher z-index ensures it's above the image */
     visibility: hidden;
     text-decoration: none;
-    box-shadow: none;
 }
 .mobile-menu ul {
     text-decoration: none;
@@ -335,14 +434,22 @@ p {
         padding: 8px 15px;
         
     }
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
+        display: block;
+        width: 150px;
+        height: auto;
+    }
 
     .logo-right{
         display: none;
     }
 
-    /* .top-left, .top-right {
+    .top-left, .top-right {
         width: 60px;
-    } */
+    }
  
         .menu-item {
             margin: 0 5px;
