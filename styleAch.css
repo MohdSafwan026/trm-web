@@ -428,12 +428,16 @@ body {
 }
 
 @media (max-width: 480px) {
-    .join-button {
-        bottom: 30px;
-        font-size: 14px;
-        padding: 8px 15px;
-        
+    body{
+        background-color: #0e0e0e;
     }
+    .header-container {
+        flex-direction: column;
+        text-align: left;
+        background-color: #0e0e0e
+    
+    }
+
     .logo-left-1{
         display: none;
     }
@@ -442,17 +446,125 @@ body {
         width: 150px;
         height: auto;
     }
-
     .logo-right{
         display: none;
     }
 
-    .top-left, .top-right {
-        width: 60px;
+    .navbar {
+        display: none;
     }
- 
-        .menu-item {
-            margin: 0 5px;
+
+    .main-image {
+        height: auto;
+    }
+
+    .join-btn {
+        bottom: -100px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    .active a {
+        color: #FB0244;
+           border-bottom: none; /* Add bottom border */
+    }
+    .hamburger {
+        
+            display: block;
+            position: absolute;
+            top: 20px;  
+            right: 20px; 
+            color: #FB0255;
+            background-color: #0e0e0e;
+            font-size: 24px;
+            z-index: 20; 
+            cursor: pointer;
+            box-shadow: none; /* Remove any box shadow */
+            border: #0e0e0e;
         }
-    }
+
+        .achievements-section {
+            padding: 50px 0;
+            background-color: #0e0e0e;
+        }
+        
+        .achievements-container {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            padding: 20px 20px;
+            background-color: #0e0e0e;
+        }
+        
+        .title {
+            color: #FB0244;
+            font-size: 25px;
+            text-align: center;  /* Center align the title */
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        /* Grid for achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);  /* Two columns */
+            gap: 10px;  /* Space between items */
+        }
+        
+        .achievement-item {
+            display: block;  /* Ensure items are stacked, not aligned side by side */
+            text-align: center;  /* Center the content inside the achievement item */
+            background-color: #1c1c1c;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 400px;  /* Optional: Set max-width for consistent size */
+            margin: 0 auto;  /* Center the item horizontally */
+        }
+        
+        .achievement-box {
+            width: 100%;  /* Image takes full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Ensure the image fits the box */
+            border: 2px solid #222;
+            border-radius: 10px;
+            margin-bottom: 15px; /* Add space between image and text */
+        }
+        
+        .achievement-text h2 {
+            color: #FB0244;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-text p {
+            font-size: 16px;
+            color: #c1c1c1;
+        }
+     
+       
     
+.mobile-menu {
+    position: absolute;  /* Ensure it's positioned relative to the parent container */
+    top: 60px;  /* Adjust based on where you want the menu to appear */
+    left: 0;
+    width: 100%;
+    background-color: #0e0e0e;
+    z-index: 20;  /* Higher z-index ensures it's above the image */
+    visibility: hidden;
+    text-decoration: none;
+}
+.mobile-menu ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+.mobile-menu ul li {
+    padding: 1px 0;
+    text-decoration: none;
+}
+.mobile-menu.active {
+    visibility: visible;
+    display:block;
+    z-index: 100px;
+}
+
+}
