@@ -4,6 +4,58 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Full-screen loader wrapper */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure it is on top of everything */
+}
+.loader-image{
+    position: relative;
+    width: 10%;
+    height: auto;
+    left: 220px;
+    bottom: 100px;
+}
+
+/* The actual loader */
+.loader {
+    width: 30%;
+    height: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    right: 80px;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #FB0255;
+    animation: loading 3s linear infinite;
+    border-radius: 5px;
+}
+
+/* Loading animation */
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
 
 body {
     font-family: 'Montserrat';
@@ -136,8 +188,57 @@ body {
         text-align: left;
         align-items: left;
         background-color: #0e0e0e
-        
+    }
+
+    #loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0e0e0e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Make sure it is on top of everything */
+    }
+    .loader-image{
+        position: relative;
+        width: 15%;
+        height: auto;
+        left: 50px;
+        bottom: 55px;
+    }
     
+    /* The actual loader */
+    .loader {
+        width: 30%;
+        height: 10px;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        right: 50px;
+    }
+    
+    .loader::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background-color: #FB0255;
+        animation: loading 3s linear infinite;
+        border-radius: 5px;
+    }
+    
+    /* Loading animation */
+    @keyframes loading {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
     }
     .logo-left {
         width: 70px;
@@ -192,6 +293,7 @@ body {
     text-decoration: none;
 }
 .mobile-menu ul {
+    list-style-type: none;
     text-decoration: none;
     list-style: none;
     padding: 0;
@@ -278,10 +380,12 @@ body {
 }
 .mobile-menu ul {
     text-decoration: none;
+    list-style-type: none;
     list-style: none;
     padding: 0;
 }
 .mobile-menu ul li {
+    list-style-type: none;
     padding: 1px 0;
     text-decoration: none;
 }
