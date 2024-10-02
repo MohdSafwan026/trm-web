@@ -80,9 +80,12 @@ body {
     text-align: left;
 }
 
-.logo-left {
+.logo-left-1 {
     width: 100px;
     height: auto;
+}
+.logo-left-2{
+    display: none;
 }
 
 .team-logo-container {
@@ -240,8 +243,12 @@ body {
             width: 100%;
         }
     }
-    .logo-left {
-        width: 70px;
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
+        display: block;
+        width: 200px;
         height: auto;
     }
     .logo-right{
@@ -254,6 +261,7 @@ body {
 
     .main-image {
         height: auto;
+        top: 100px;
     }
 
     .join-btn {
@@ -314,6 +322,15 @@ body {
     body {
         display: block;
         padding: 10px;
+    }
+
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
+        display: block;
+        width: 150px;
+        height: auto;
     }
     .logo-right{
       padding-right: 10px; 
