@@ -425,6 +425,14 @@ body {
     .logo-right{
         display: none;
     }
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
+        display: block;
+        width: 150px;
+        height: auto;
+    }
 
     .top-left, .top-right {
         width: 60px;
