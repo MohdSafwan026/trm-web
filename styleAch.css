@@ -27,9 +27,12 @@ body {
     text-align: left;
 }
 
-.logo-left {
+.logo-left-1 {
     width: 100px;
     height: auto;
+}
+.logo-left-2{
+    display: none;
 }
 
 .team-logo-container {
@@ -153,8 +156,12 @@ body {
     
     }
 
-    .logo-left {
-        width: 70px;
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
+        display: block;
+        width: 200px;
         height: auto;
     }
     .logo-right{
@@ -289,8 +296,12 @@ body {
     
     }
 
-    .logo-left {
-        width: 70px;
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
+        display: block;
+        width: 150px;
         height: auto;
     }
     .logo-right{
@@ -358,30 +369,32 @@ body {
         }
         
         .achievement-item {
-            display: flex;
-            align-items: center;
+            display: block;  /* Ensure items are stacked, not aligned side by side */
+            text-align: center;  /* Center the content inside the achievement item */
             background-color: #1c1c1c;
-            padding: 10px;
+            padding: 15px;
             border-radius: 8px;
+            max-width: 400px;  /* Optional: Set max-width for consistent size */
+            margin: 0 auto;  /* Center the item horizontally */
         }
         
         .achievement-box {
-            width: 30%;
-            height: auto;
+            width: 100%;  /* Image takes full width of the container */
+            height: auto; /* Maintain aspect ratio */
             object-fit: cover; /* Ensure the image fits the box */
             border: 2px solid #222;
-            margin-right: 18px;
-            border-radius: 8px;
+            border-radius: 10px;
+            margin-bottom: 15px; /* Add space between image and text */
         }
         
         .achievement-text h2 {
             color: #FB0244;
-            font-size: 16px;
+            font-size: 24px;
             margin-bottom: 10px;
         }
         
         .achievement-text p {
-            font-size: 12px;
+            font-size: 16px;
             color: #c1c1c1;
         }
      
@@ -421,6 +434,14 @@ body {
         padding: 8px 15px;
         
     }
+    .logo-left-1{
+        display: none;
+    }
+    .logo-left-2 {
+        display: block;
+        width: 150px;
+        height: auto;
+    }
 
     .logo-right{
         display: none;
@@ -429,10 +450,7 @@ body {
     .top-left, .top-right {
         width: 60px;
     }
-    .logo-left{
-        width:70px;
-        height: auto;
-    }
+ 
         .menu-item {
             margin: 0 5px;
         }
