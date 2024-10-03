@@ -25,12 +25,9 @@ body {
     text-align: left;
 }
 
-.logo-left-1 {
+.logo-left {
     width: 100px;
     height: auto;
-}
-.logo-left-2{
-    display: none;
 }
 
 .team-logo-container {
@@ -87,12 +84,12 @@ body {
 
 .image-container {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 38px;
 }
 
 .image-container img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     border: 5px solid #FB0244;
     padding: 10px;
 }
@@ -152,14 +149,11 @@ p {
     
     }
 
-    .logo-left-1{
-        display: none;
-    }
-    .logo-left-2 {
-        display: block;
-        width: 200px;
+    .logo-left {
+        width: 70px;
         height: auto;
     }
+
     .logo-right{
         display: none;
     }
@@ -168,7 +162,7 @@ p {
         display: none;
     }
     .content-container {
-        flex: 2;
+        flex: 3;
         
     }
     .main-image {
@@ -188,91 +182,111 @@ p {
            border-bottom: none; /* Add bottom border */
     }
     .hamburger {
-        
-            display: block;
-            position: absolute;
-            top: 20px;  
-            right: 20px; 
-            color: #FB0255;
-            background-color: #0e0e0e;
-            font-size: 24px;
-            z-index: 20; 
-            cursor: pointer;
-            box-shadow: none; /* Remove any box shadow */
-            border: #0e0e0e;
-        }
-     
-        .content-container {
-            flex: 2;
-            /* padding-left: 200px; */
-        }
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: #FB0255;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    /* Mobile Menu Styling */
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(14, 14, 14, 0.9);
+        position: fixed;
+        top: 0;
+        right: -100%;  /* Initially hidden outside of the viewport */
+        width: 50%;  /* Cover 50% of the screen width */
+        height: 100vh;
+        z-index: 9;
+        padding: 20px;
+        transition: right 0.5s ease;
+        backdrop-filter: blur(1px);  /* Slide-in effect */
+    }
+
+    .mobile-menu.active {
+        right: 0;  /* Slide in from the right */
+        display: flex;
+    }
+
+    /* Menu Item Styling */
+    .mobile-menu .menu-item {
+        margin: 4px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .mobile-menu .menu-item a {
+        color: #FB0244;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 10px;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover and Click Effects */
+    .mobile-menu .menu-item a:hover {
+        background-color: #FB0255;
+        color: #ffffff;
+    }
+
+    .mobile-menu .menu-item a:active {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    /* Ensure the mobile menu does not scroll when it's open */
+    .mobile-menu.active {
+        overflow-y: hidden;
+    }
+     /* Smooth Slide-In from Right to Left */
+     .mobile-menu {
+        transform: translateX(100%);  /* Off-screen initially */
+        transition: transform 0.5s ease;
+    }
+
+    .mobile-menu.active {
+        transform: translateX(0);  /* Slide to its normal position */
+    }
         
         h2 {
             display: flex;
             font-display: flex;
             color: #FB0244;
-            font-size: 22px;
+            font-size: 20px;
             align-items: center;
             /* margin-bottom: 20px;
             size-adjust:inherit ; */
         }
         
         p {
-            font-size: 14px;
+            font-size: 8px;
             margin-bottom: 20px;
             line-height: 1.6;
         }
     
-.mobile-menu {
-    position: absolute;  /* Ensure it's positioned relative to the parent container */
-    top: 60px;  /* Adjust based on where you want the menu to appear */
-    left: 0;
-    width: 100%;
-    background-color: #0e0e0e;
-    z-index: 20;  /* Higher z-index ensures it's above the image */
-    visibility: hidden;
-    text-decoration: none;
-}
-.mobile-menu ul {
-    text-decoration: none;
-    list-style: none;
-    padding: 0;
-}
-.mobile-menu ul li {
-    padding: 1px 0;
-    text-decoration: none;
-}
-.mobile-menu.active {
-    visibility: visible;
-    display:block;
-    z-index: 100px;
-}
+
 
 }
 
 @media (max-width: 768px) {
-   
     body {
         display: block;
         padding: 10px;
     }
-    .about-section {
-        display: flex;
-        justify-content: center;
-        
-    
-    }
     .logo-right{
       padding-right: 10px; 
    }
-   .logo-left-1{
-    display: none;
-    }
-    .logo-left-2 {
-    display: block;
-    width: 150px;
-    height: auto;
-    }
     .navbar ul li {
         margin: 0;
     }
@@ -297,196 +311,167 @@ p {
         right: 5px;
     }
 
-    .image-container img {
+    .main-image {
+        max-width: 100%;
+        display: block;
         width: 100%;
-        max-width: 400px;
-        border: 5px solid #FB0244;
-        padding: 10px;
-    }
-    
-    .content-container {
-        flex: 2;
-        /* padding-left: 200px; */
-    }
-    
-    h2 {
-        display: flex;
-        font-display: flex;
-        color: #FB0244;
-        font-size: 14px;
-        align-items: center;
-        margin-bottom: 20px;
-        size-adjust:inherit ;
-    }
-    
-    p {
-        font-size: 12px;
-        margin-bottom: 12px;
-        line-height: 1.6;
+        height: auto;
     }
 
+    .main-image {
+        max-width: 100%;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
-    .hamburger {
-        
+     /* Hamburger Icon Styling */
+     .hamburger {
         display: block;
         position: absolute;
-        top: 20px;  
-        right: 20px; 
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
         color: #FB0255;
-        background-color: #0e0e0e;
-        font-size: 24px;
-        z-index: 20; 
+        background-color: transparent;
+        border: none;
         cursor: pointer;
-        box-shadow: none; /* Remove any box shadow */
-        border: #0e0e0e;
-}
-    
-    
-.mobile-menu {
-    position: absolute;  /* Ensure it's positioned relative to the parent container */
-    top: 60px;  /* Adjust based on where you want the menu to appear */
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    z-index: 20;  /* Higher z-index ensures it's above the image */
-    visibility: hidden;
-    text-decoration: none;
-    box-shadow: none;
-}
-.mobile-menu ul {
-    text-decoration: none;
-    list-style: none;
+        z-index: 10;
+    }
+
+    /* Mobile Menu Styling */
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(14, 14, 14, 0.9);
+        position: fixed;
+        top: 0;
+        right: -100%;  /* Initially hidden outside of the viewport */
+        width: 50%;  /* Cover 50% of the screen width */
+        height: 100vh;
+        z-index: 9;
+        padding: 20px;
+        transition: right 0.5s ease;
+        backdrop-filter: blur(1px);  /* Slide-in effect */
+    }
+
+    .mobile-menu.active {
+        right: 0;  /* Slide in from the right */
+        display: flex;
+    }
+
+    /* Menu Item Styling */
+    .mobile-menu .menu-item {
+        margin: 4px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .mobile-menu .menu-item a {
+        color: #FB0244;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 10px;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover and Click Effects */
+    .mobile-menu .menu-item a:hover {
+        background-color: #FB0255;
+        color: #ffffff;
+    }
+
+    .mobile-menu .menu-item a:active {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    /* Ensure the mobile menu does not scroll when it's open */
+    .mobile-menu.active {
+        overflow-y: hidden;
+    }
+     /* Smooth Slide-In from Right to Left */
+     .mobile-menu {
+        transform: translateX(100%);  /* Off-screen initially */
+        transition: transform 0.5s ease;
+    }
+
+    .mobile-menu.active {
+        transform: translateX(0);  /* Slide to its normal position */
+    }
+.about-section {
+    position: relative; /* Relative positioning for the heading to be positioned over the image */
+    flex-direction: column;
+    align-items: center;
     padding: 0;
 }
-.mobile-menu ul li {
-    padding: 1px 0;
-    text-decoration: none;
+
+.image-container {
+    width: 78vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 10vw;
 }
-.mobile-menu.active {
-    visibility: visible;
-    display:block;
-    z-index: 100px;
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    border: 5px solid #FB0244;
+    padding: 10px;
+    max-height: 300px;/* Ensure the image covers the container without stretching */
+}
+
+h2 {
+    position: absolute; /* Position the heading on top of the image */
+    top: 20px; /* Adjust to position the heading at the top */
+    left: 30vw;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #FB0244; /* Ensure the text is visible over the image */
+    z-index: 10; /* Make sure the heading is above the image */
+    margin: 0;
+}
+
+.content-container {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 14px; /* Smaller font size for better readability on mobile */
 }
 
 }
+
 
 @media (max-width: 480px) {
+    .join-button {
+        bottom: 30px;
+        font-size: 14px;
+        padding: 8px 15px;
+        
+    }
 
-        body {
-            display: block;
-            padding: 10px;
-        }
-        .about-section {
-            display: flex;
-            justify-content: center;
-            
-        
-        }
-        .logo-right{
-          padding-right: 10px; 
-       }
-       .logo-left-1{
+    .logo-right{
         display: none;
-        }
-        .logo-left-2 {
-        display: block;
-        width: 150px;
-        height: auto;
-        }
-        .navbar ul li {
-            margin: 0;
-        }
-    
-        .join-button {
-            bottom: 30px;
-            font-size: 16px;
-            padding: 100px 20px;
-        }
-    
-        .top-left, .top-right {
-            padding-right:10px;
-            width: 80px;
-            top: 10px;
-        }
-    
-        .top-left {
-            left: 5px;
-        }
-    
-        .top-right {
-            right: 5px;
-        }
-    
-        .image-container img {
-            width: 100%;
-            max-width: 400px;
-            border: 5px solid #FB0244;
-            padding: 10px;
-        }
-        
-        .content-container {
-            flex: 2;
-            /* padding-left: 200px; */
-        }
-        
-        h2 {
-            display: flex;
-            font-display: flex;
-            color: #FB0244;
-            font-size: 12px;
-            align-items: center;
-            margin-bottom: 20px;
-            size-adjust:inherit ;
-        }
-        
-        p {
-            font-size: 10px;
-            margin-bottom: 12px;
-            line-height: 1.6;
-        }
-    
-    
-        .hamburger {
-            
-            display: block;
-            position: absolute;
-            top: 20px;  
-            right: 20px; 
-            color: #FB0255;
-            background-color: #0e0e0e;
-            font-size: 24px;
-            z-index: 20; 
-            cursor: pointer;
-            box-shadow: none; /* Remove any box shadow */
-            border: #0e0e0e;
     }
-        
-        
-    .mobile-menu {
-        position: absolute;  /* Ensure it's positioned relative to the parent container */
-        top: 60px;  /* Adjust based on where you want the menu to appear */
-        left: 0;
-        width: 100%;
-        background-color: #000000;
-        z-index: 20;  /* Higher z-index ensures it's above the image */
-        visibility: hidden;
-        text-decoration: none;
-        box-shadow: none;
-    }
-    .mobile-menu ul {
-        text-decoration: none;
-        list-style: none;
-        padding: 0;
-    }
-    .mobile-menu ul li {
-        padding: 1px 0;
-        text-decoration: none;
-    }
-    .mobile-menu.active {
-        visibility: visible;
-        display:block;
-        z-index: 100px;
-    }
-    
+
+    /* .top-left, .top-right {
+        width: 60px;
+    } */
+ 
+        .menu-item {
+            margin: 0 5px;
+        }
     }
     
